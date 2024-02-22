@@ -7,14 +7,14 @@
 
 <main class="main">
   <h3>A faire</h3>
-  <form action="">
+  <form [formGroup]="taskForm" (ngSubmit)="addTask($event)" >
     <label for="taskName">Nom de la tâche</label>
     <br />
-    <input type="text" id="taskName" placeholder="Nouvelle tâche" autofocus />
+    <input type="text" id="taskName" placeholder="Nouvelle tâche" formControlName="taskName" autofocus />
     <br />
     <label for="taskDate">A réliser le</label>
     <br />
-    <input type="date" id="taskDate" />
+    <input type="date" id="taskDate" formControlName="taskDate" />
     <br />
     <input type="submit" value="créer" />
   </form>
